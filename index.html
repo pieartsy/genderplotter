@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Plotly.js library-->
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    </head>
+    <body>
+        <h1>Gender Plotter</h1>
+        <div id="genderplotter" style="height:400px"><!-- Plotly chart will be drawn inside this DIV --></div>
+        
+    <!--Male gender-->
+        <div class="slidercontainer
+        ">
+        <p><b>How male is your gender?</b> <span id="malevalue"></span>%</p>
+            <input type="range" min="0" max="100" value="50" class="slider" id="male">
+        </div>
+    <!--Female gender-->
+        <div class="slidercontainer
+        ">
+        <p><b>How female is your gender?</b> <span id="femalevalue"></span>%</p>
+            <input type="range" min="0" max="100" value="50" class="slider" id="female">
+        </div>
+    <!--Aporagender-->
+        <div class="slidercontainer
+        ">
+        <p><b>How apora is your gender?</b> <span id="aporavalue"></span>%</p>
+            <input type="range" min="0" max="100" value="50" class="slider" id="apora">
+        </div>
+        <script src="plotter.js"></script> 
+    </body>
+</html>
