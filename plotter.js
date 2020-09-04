@@ -34,29 +34,38 @@ var trace = {
 	marker: {
 		size: 12,
 		line: {
-		color: 'rgba(217, 217, 217, 0.14)',
-		width: 0.5},
-		opacity: 0.8},
+      color: 'rgba(217, 217, 217, 0.14)',
+      width: 0.5
+    },
+    opacity: 0.8
+  },
 	type: 'scatter3d'
 };
+
 var layout = {
     scene:{
-       aspectmode: "manual",
-     aspectratio: {
-       x: 1, y: 1, z: 1,
+      aspectmode: "manual",
+      aspectratio: {
+        x: 1, y: 1, z: 1,
       },
-     xaxis: {
-      range: [0, 100],
+      xaxis: {
+        title: "female",
+        range: [0, 100],
+      },
+      yaxis: {
+        title: "male",
+        range: [0, 100],
+      },
+      zaxis: {
+        title: "apora",
+        range: [0, 100],
+      }
     },
-     yaxis: {
-      range: [0, 100],
-    },
-     zaxis: {
-     range: [0, 100],
-    }},
-  };
+};
+
 var data = [trace];
-Plotly.newPlot('genderplotter', data, layout, {responsive: true});
+var config = {responsive: true}
+Plotly.newPlot('genderplotter', data, layout, config);
 
 function adjustValue1(axis, value)
 {
